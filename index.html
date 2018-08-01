@@ -7,6 +7,19 @@
 </head>
 <body>
   <h1><a href="index.html">아이유 노래</a></h1>
+  <div id="button">
+    <input id="night_day" type="button" value="night" onclick="
+     if(document.querySelector('#night_day').value === 'night'){
+        document.querySelector('body').style.backgroundColor = 'black';
+        document.querySelector('body').style.color = 'white';
+        document.querySelector('#night_day').value ='day';
+      } else {
+        document.querySelector('body').style.backgroundColor = 'white';
+        document.querySelector('body').style.color = 'black';
+        document.querySelector('#night_day').value ='night';
+      }
+    ">
+  </div>
   <div id="grid">
   <ol>
     <li><a href="1.html">밤편지</a></li>
