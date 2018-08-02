@@ -15,11 +15,12 @@
     border-right: 1px solid gray;
     width: 210px;
   }
-  #night_day {
+  #button2 {
     width: 100px;
     height: 40px;
     font-size: 20px;
   }
+
   ol{
     border-right: 1px solid gray;
     width:150px;
