@@ -4,21 +4,40 @@
   <title>아이유 노래</title>
   <meta charset="utf-8">
   <link rel="stylesheet" href="style.css">
+  <script>
+    function nightdayhandler(self){
+    var target = document.querySelector('body');
+     if(self.value === 'night'){
+        target.style.backgroundColor = 'black';
+        target.style.color = 'white';
+        self.value ='day';
+
+        var alist = document.querySelectorAll('a');
+        var i = 0;
+        while(i < alist.length){
+          alist[i].style.color = 'yellow';
+          i = i + 1;
+        }
+      } else {
+        target.style.backgroundColor = 'white';
+        target.style.color = 'black';
+        self.value ='night';
+
+        var alist = document.querySelectorAll('a');
+        var i = 0;
+        while(i < alist.length){
+          alist[i].style.color = 'blue';
+          i = i + 1;
+        }
+      }
+    }
+  </script>
 </head>
 <body>
   <h1><a href="index.html">아이유 노래</a></h1>
   <div id="button">
     <input id=button2 type="button" value="night" onclick="
-    var target = document.querySelector('body');
-     if(this.value === 'night'){
-        target.style.backgroundColor = 'black';
-        target.style.color = 'white';
-        this.value ='day';
-      } else {
-        target.style.backgroundColor = 'white';
-        target.style.color = 'black';
-        this.value ='night';
-      }
+     nightdayhandler(this); 
     ">
   </div>
   <div id="grid">
@@ -30,7 +49,7 @@
   <div id="article">
   <h2>아이유</h2>
   <strong>아이유</strong> 출생1993년 5월 16일 제32회
-  <a href="https://ko.wikipedia.org/wiki/%EA%B3%A8%EB%93%A0_%EB%94%94%EC%8A%A4%ED%81%AC" target="_blank" title="골든디스크" class="saw">골든디스크</a> 어워즈 디지털음원부문 대상
+  <a href="https://ko.wikipedia.org/wiki/%EA%B3%A8%EB%93%A0_%EB%94%94%EC%8A%A4%ED%81%AC" target="_blank" title="골든디스크">골든디스크</a> 어워즈 디지털음원부문 대상
   <h2>아이유</h2>
   <p><img src="IU.jpg" width="500" height="750"><br> 대한민국의 가수이다. 아이유(IU)라는 이름은 'I'와 'You'를 합친 합성어로 '너와 내가 음악으로 하나가 된다'라는 의미이다.</p>
 </div>

@@ -4,23 +4,41 @@
   <title>팔레트</title>
   <meta charset="utf-8">
   <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <h1><a href="index.html">아이유 노래</a></h1>
-<div id="button">
-    <input id=button2 type="button" value="night" onclick="
+    <script>
+    function nightdayhandler(self){
     var target = document.querySelector('body');
-     if(this.value === 'night'){
+     if(self.value === 'night'){
         target.style.backgroundColor = 'black';
         target.style.color = 'white';
-        this.value ='day';
+        self.value ='day';
+
+        var alist = document.querySelectorAll('a');
+        var i = 0;
+        while(i < alist.length){
+          alist[i].style.color = 'yellow';
+          i = i + 1;
+        }
       } else {
         target.style.backgroundColor = 'white';
         target.style.color = 'black';
-        this.value ='night';
+        self.value ='night';
+
+        var alist = document.querySelectorAll('a');
+        var i = 0;
+        while(i < alist.length){
+          alist[i].style.color = 'blue';
+          i = i + 1;
+        }
       }
+    }
+  </script>
+</head>
+<body>
+  <h1><a href="index.html">아이유 노래</a></h1>
+    <div id="button">
+    <input id=button2 type="button" value="night" onclick="
+     nightdayhandler(this);
     ">
-  </div>
   </div>
   <div id="grid">
   <ol>
